@@ -35,7 +35,7 @@ var myslog = slog.New(jsonHandler)
 
 func serveHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Allow-Headers", "Authorization, Content-Type")
+	w.Header().Set("Access-Control-Allow-Headers", "Authorization")
 	if r.Method == http.MethodOptions {
 		w.WriteHeader(http.StatusOK)
 		return
